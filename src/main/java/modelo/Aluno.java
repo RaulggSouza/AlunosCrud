@@ -17,8 +17,7 @@ public class Aluno {
     private BigDecimal nota2;
     private BigDecimal nota3;
 
-    public Aluno(Long id, String nome, String ra, String email, BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
-        this.id = id;
+    public Aluno(String nome, String ra, String email, BigDecimal nota1, BigDecimal nota2, BigDecimal nota3) {
         this.nome = nome;
         this.ra = ra;
         this.email = email;
@@ -84,5 +83,13 @@ public class Aluno {
 
     public void setNota3(BigDecimal nota3) {
         this.nota3 = nota3;
+    }
+
+    public void showAluno() {
+        System.out.println("Dados do aluno:");
+        System.out.println("Nome: "+ this.getNome());
+        System.out.println("Email: " + this.getEmail());
+        System.out.println("RA: " + this.getRa());
+        System.out.println("Notas: " + this.getNota1() + " - " + this.getNota2() + " - " + this.getNota3());
     }
 }
